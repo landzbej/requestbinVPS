@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/static/js/main.a2cfaf6b.js",
+    "static/media/bigDonut.png": "/static/media/bigDonut.6ebd304ad46024126ccd.png",
+    "index.html": "/index.html",
+    "main.a2cfaf6b.js.map": "/static/js/main.a2cfaf6b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.a2cfaf6b.js"
+  ]
+}

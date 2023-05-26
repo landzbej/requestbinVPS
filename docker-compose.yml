@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DEV_PROXY=${DEV_PROXY}
+      - PROD_PROXY=${PROD_PROXY}
+      - MONGODB_URI=${MONGODB_URI}
+  cron:
+    build:
+      context: .
+      dockerfile: Dockerfile_cron
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: marwan
+      POSTGRES_PASSWORD: bonbon
+      POSTGRES_DB: requestbin
+    volumes:
+      - ./db-init-scripts:/docker-entrypoint-initdb.d/
