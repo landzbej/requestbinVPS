@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const mongoose = require("mongoose");
-// env file stored locally
+
 mongoose
   .connect(config.MONGODB_URI)
   .then(() => console.log("connected to MongoDB"))
